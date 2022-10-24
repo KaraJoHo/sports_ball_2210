@@ -1,7 +1,7 @@
 
 class Team
   attr_reader :team_name, :city,
-              :player_count, :roster
+    :player_count, :roster
 
   def initialize(team_name, city)
     @team_name = team_name
@@ -56,7 +56,6 @@ class Team
       avg_cost << player.total_cost
     end
     avg_cost.sum
-    #require 'pry' ;binding.pry
     average_cost = avg_cost.sum / player_count
     format = average_cost.to_s.reverse.scan(/\d{1,3}/).join(',').reverse
     "$#{format}"

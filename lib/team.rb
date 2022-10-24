@@ -49,4 +49,16 @@ class Team
       "player_count" => player_count
     }
   end
+
+  def average_cost_of_player
+    avg_cost = []
+    roster.map do |player|
+      avg_cost << player.total_cost
+    end
+    avg_cost.sum
+    #require 'pry' ;binding.pry
+    average_cost = avg_cost.sum / player_count
+    format = average_cost.to_s.reverse.scan(/\d{1,3}/).join(',').reverse
+    "$#{format}"
+  end
 end

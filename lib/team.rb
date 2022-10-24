@@ -30,28 +30,18 @@ class Team
   def short_term_players
     short_term = []
     roster.select do |player|
-
       if player.contract_length <= 24
         short_term << player
       end
     end
   end
 
-  # def contract_info
-  #
-  #
-  #   @roster.map do |player|
-  #     @long_term_players = []
-  #
-  #     @short_term_players = []
-  #
-  #     if player.contract_length > 24
-  #       @long_term_players << player
-  #     elsif player.contract_length <= 24
-  #       @short_term_players << player
-  #     end
-  #   end
-  #
-  # end
+  def total_value
+    cost = []
+    roster.map do |player|
+      cost << player.total_cost
+    end
+    cost.sum
+  end
 
 end

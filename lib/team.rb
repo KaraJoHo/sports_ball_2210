@@ -13,7 +13,6 @@ class Team
 
   def add_player(player)
     @roster << player
-    #require 'pry' ;binding.pry
     @player_count += 1
   end
 
@@ -44,4 +43,10 @@ class Team
     cost.sum
   end
 
+  def details
+    details = {
+      "total_value" => total_value,
+      "player_count" => player_count
+    }
+  end
 end

@@ -19,4 +19,14 @@ RSpec.describe Player do
       expect(@player.total_cost).to eq(36000000)
     end
   end
+
+  describe '#set_nickname' do 
+    it 'can give the player a nickname' do 
+      expect(@player.nickname).to eq(nil)
+
+      @player.set_nickname("Squints")
+
+      expect(@player.nickname).to eq("Squints")
+    end
+  end
 end

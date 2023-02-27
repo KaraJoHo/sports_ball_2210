@@ -55,6 +55,12 @@ RSpec.describe Team do
 
   describe '#total_value' do 
     it 'is the total cost of all the players' do 
+
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+      
       expect(@team.total_value).to eq(85200000)
     end
   end

@@ -29,4 +29,11 @@ class Team
       player.total_cost
     end
   end
+
+  def details 
+    team_details = {}
+    team_details["total_value"] = total_value
+    team_details["player_count"] = @player_count
+    team_details
+  end
 end

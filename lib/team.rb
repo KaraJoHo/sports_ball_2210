@@ -6,4 +6,8 @@ class Team
     @roster = []
     @player_count = 0
   end
+
+  def add_player(player)
+    @roster << player
+  end
 end

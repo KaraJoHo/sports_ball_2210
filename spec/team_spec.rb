@@ -52,4 +52,10 @@ RSpec.describe Team do
       expect(@team.short_term_players).to eq([@player_2, @player_4])
     end
   end
+
+  describe '#total_value' do 
+    it 'is the total cost of all the players' do 
+      expect(@team.total_value).to eq(85200000)
+    end
+  end
 end

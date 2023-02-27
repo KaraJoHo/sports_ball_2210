@@ -41,4 +41,15 @@ RSpec.describe Team do
       expect(@team.long_term_players).to eq([@player_1, @player_3])
     end
   end
+
+  describe 'short_term_players' do 
+    it 'is a short term player if their contract length is 2 years or less' do 
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+
+      expect(@team.short_term_players).to eq([@player_2, @player_4])
+    end
+  end
 end

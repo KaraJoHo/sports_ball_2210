@@ -71,8 +71,19 @@ RSpec.describe Team do
       @team.add_player(@player_2)
       @team.add_player(@player_3)
       @team.add_player(@player_4)
-      
+
       expect(@team.details).to eq({"total_value" => 85200000, "player_count" => 4})
+    end
+  end
+
+  describe "#average_cost_of_player" do 
+    it 'is the average cost of the player' do 
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+
+      expect(@team.average_cost_of_player).to eq("$21,300,000")
     end
   end
 end

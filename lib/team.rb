@@ -36,4 +36,9 @@ class Team
     team_details["player_count"] = @player_count
     team_details
   end
+
+  def average_cost_of_player 
+    average = (total_value / @player_count) 
+    "$#{average.to_s.reverse.chars.each_slice(3).map(&:join).join(",").reverse}"
+  end
 end

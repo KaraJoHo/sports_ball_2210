@@ -41,4 +41,11 @@ class Team
     average = (total_value / @player_count) 
     "$#{average.to_s.reverse.chars.each_slice(3).map(&:join).join(",").reverse}"
   end
+
+  def players_by_last_name 
+    @roster.map do |player| 
+      player.last_name
+    end.sort.join(", ")
+    
+  end
 end

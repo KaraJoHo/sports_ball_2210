@@ -94,7 +94,7 @@ RSpec.describe Team do
       @team.add_player(@player_3)
       @team.add_player(@player_4)
 
-      expect(@team.players_by_last_name).to eq(["DeNunez, McClennan, Palledorous, Porter"])
+      expect(@team.players_by_last_name).to eq("DeNunez, McClennan, Palledorous, Porter")
     end
   end
 end
